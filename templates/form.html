@@ -1,0 +1,20 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Meal Attendance</title>
+</head>
+<body>
+    <h2>Meal Attendance Form</h2>
+    <form method="POST">
+        <label for="student_id">Enter Student ID:</label><br>
+        <input type="text" id="student_id" name="student_id" required><br><br>
+        <input type="submit" value="Submit">
+    </form>
+
+    {% if success %}
+        <p style="color: green;">✅ {{ message }}</p>
+    {% elif error %}
+        <p style="color: red;">❌ {{ message }}</p>
+    {% endif %}
+</body>
+</html>
